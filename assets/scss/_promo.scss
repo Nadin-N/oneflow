@@ -1,0 +1,61 @@
+.promo {
+	max-height: 450px;
+	width: 100%;
+	background-image: url("../img/02promo/background_promo.png");
+	background-position: 71% 50%;
+	background-size: cover;
+	@media (min-width: 992px) {
+		max-height: 850px;
+	}
+	.promo-wrap {
+		display: grid;
+		grid-template: minmax(auto, 450px) / minmax(auto, 350px);
+		justify-content: start;
+		align-items: center;
+		@media (min-width: 992px) {
+			grid-template: minmax(auto, 850px) / minmax(auto, 510px);
+		}
+
+		.promo-box {
+			display: grid;
+			grid-template: repeat(3, 1fr) / 250px;
+			@media (min-width: 421px) {
+				grid-template: repeat(3, 1fr) / 1fr;
+			}
+			row-gap: 25px;
+		}
+		.promo-title {
+			font-family: "Roboto", sans-serif;
+			@include fontzhsc(46px, 103%, 1px, inherit);
+			@media (min-width: 992px) {
+				@include fontzhsc(76px, 103%, 2px, inherit);
+			}
+		}
+		.promo-description {
+			@include fontzhsc(18px, 103%, 0.5px, inherit);
+			text-shadow: #fff 2px 1px;
+			@media (min-width: 992px) {
+				@include fontzhsc(24px, 133%, 0.5px, inherit);
+				text-shadow: none;
+			}
+		}
+		.promo-buttons {
+			display: block;
+
+			.promo-btn {
+				display: inline-block;
+				line-height: 312.5%;
+				padding: 3px;
+			}
+			.promo-btn a {
+				@include fontzh(16px, 100%);
+				padding: 15px 21px;
+			}
+			@media (min-width: 421px) {
+				display: grid;
+				grid-template: auto / repeat(4, 1fr);
+				column-gap: 16px;
+			}
+		}
+	}
+}

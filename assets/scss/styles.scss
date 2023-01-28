@@ -1,0 +1,80 @@
+@import "_reset";
+@import "_fonts";
+@import "_mixins";
+@import "_header";
+@import "_promo";
+@import "_partners";
+@import "_process";
+@import "_collaborate";
+@import "_pressplay";
+@import "_features";
+@import "_demo";
+@import "_reviews";
+@import "_tools";
+@import "_blog";
+@import "_more";
+@import "_footer";
+
+body {
+	font-family: "Work Sans", sans-serif;
+	font-weight: 400;
+	background-color: #fff;
+	line-height: 133%;
+	color: #013a4c;
+	// work with adaptive!!!
+	max-width: 1440px;
+	margin: 0 auto;
+	display: grid;
+	min-height: 100vh;
+	grid-template: minmax(70px, auto) 1fr minmax(100px, auto) / 1fr;
+}
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+	@media (min-width: 576px) {
+		max-width: 80%;
+	}
+}
+a {
+	color: #013a4c;
+	white-space: nowrap;
+	&:hover {
+		color: rgb(253, 1, 1);
+	}
+}
+
+.btn-primary a {
+	background: #ffd063;
+	border: 1px solid #ffd063;
+	border-radius: 4px;
+	padding: 11px 17px;
+	&:hover {
+		color: #ffd063;
+		background-color: #013a4c;
+		border: 1px solid #013a4c;
+	}
+}
+.btn-secondary a {
+	border: 1px solid #346170;
+	border-radius: 4px;
+	padding: 11px 17px;
+	background: #fff;
+	&:hover {
+		background-color: #013a4c;
+		border: 1px solid #013a4c;
+		color: #fff;
+	}
+}
+
+.btn-tertiary a {
+	background-color: #013a4c;
+	border-radius: 4px;
+	padding: 11px 17px;
+	color: #fff;
+	&:hover {
+		border: 1px solid #346170;
+		border-radius: 4px;
+		background: #fff;
+		color: #013a4c;
+	}
+}

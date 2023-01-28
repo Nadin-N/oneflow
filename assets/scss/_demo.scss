@@ -1,0 +1,36 @@
+.demo {
+	background: url("../img/08demo/background-demo.png");
+	background-position: 60% 40%;
+	background-size: cover;
+	display: grid;
+	grid-template: minmax(auto, 450px) / 1fr;
+	@media (min-width: 992px) {
+		display: grid;
+		grid-template: minmax(auto, 850px) / 1fr;
+	}
+	.demo-wrap {
+		align-self: center;
+		h2 {
+			font-family: "Roboto", sans-serif;
+			font-weight: 700;
+			@include fontzhsc(40px, 107%, 2px, #f2dce4);
+			@media (min-width: 992px) {
+				@include fontzhsc(73px, 107%, 2px, #f2dce4);
+			}
+		}
+		.demo-description {
+			padding: 15px 0 15px;
+			@include fontzhsc(20px, 123%, 0.5px, #fff);
+			text-shadow: #013a4c 1px 1px;
+			@media (min-width: 992px) {
+				@include fontzhsc(26px, 123%, 0.5px, #fff);
+				max-width: 470px;
+				padding: 31px 0 25px;
+				text-shadow: none;
+			}
+		}
+		.demo-button a {
+			@include fontzh(14px, 257%);
+		}
+	}
+}

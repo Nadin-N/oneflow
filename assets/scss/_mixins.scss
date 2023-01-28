@@ -1,0 +1,10 @@
+@mixin fontzh($z, $h) {
+	font-size: $z;
+	line-height: $h;
+}
+@mixin fontzhsc($z, $h, $s, $c) {
+	font-size: $z;
+	line-height: $h;
+	letter-spacing: $s;
+	color: $c;
+}

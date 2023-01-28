@@ -1,0 +1,39 @@
+.partners {
+	background-color: #013a4c;
+	display: grid;
+	grid-template: minmax(auto, 320px) / 1fr;
+	justify-content: center;
+	align-items: center;
+	@media (min-width: 992px) {
+		grid-template: minmax(auto, 288px) / 1fr;
+	}
+	.partners-wrap {
+		display: grid;
+		grid-template: minmax(auto, 38px) / 1fr;
+		justify-items: center;
+		row-gap: 24px;
+		h2 {
+			text-align: center;
+			padding-bottom: 15px;
+			font-family: "Roboto", sans-serif;
+			@include fontzhsc(20px, 100%, 0.7px, #fff);
+			@media (min-width: 992px) {
+				@include fontzhsc(25px, 152%, 0.7px, #fff);
+			}
+		}
+		.partner-logos {
+			display: grid;
+			grid-template: 2fr / repeat(2, 1fr);
+			column-gap: 10px;
+			row-gap: 10px;
+			@media (min-width: 460px) {
+				grid-template: 2fr / repeat(4, 1fr);
+				align-items: center;
+			}
+			@media (min-width: 992px) {
+				grid-template: 1fr / repeat(7, 1fr);
+				column-gap: 32px;
+			}
+		}
+	}
+}

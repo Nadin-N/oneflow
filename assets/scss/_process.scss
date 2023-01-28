@@ -1,0 +1,64 @@
+.process {
+	background-color: #013a4c;
+	.process-wrap {
+		display: grid;
+		grid-template: 1fr 1fr/ 1fr;
+		@media (min-width: 992px) {
+			grid-template: minmax(auto, 507px) / 1fr 1fr;
+			column-gap: 110px;
+		}
+		.process-box {
+			display: grid;
+			grid-template: 2fr 2fr 1fr/1fr;
+			@media (min-width: 992px) {
+				grid-template: 6fr 2fr 1fr/1fr;
+			}
+			h2 {
+				font-family: "Roboto", sans-serif;
+				max-width: 100%;
+				text-align: center;
+				@include fontzhsc(40px, 100%, 0.4px, #f2dce4);
+				@media (min-width: 992px) {
+					max-width: 400px;
+					@include fontzhsc(76px, 100%, 0.4px, #f2dce4);
+					text-align: start;
+				}
+			}
+			.process-description {
+				@include fontzhsc(21px, 133%, normal, #fff);
+				padding-bottom: 15px;
+				max-width: 100%;
+				text-align: center;
+				@media (min-width: 992px) {
+					max-width: 528px;
+					text-align: start;
+					@include fontzhsc(18px, 133%, normal, #fff);
+				}
+			}
+			.process-buttons {
+				text-align: center;
+				@media (min-width: 992px) {
+					text-align: start;
+				}
+				.process-btn a {
+					@include fontzh(18px, 267%);
+					padding: 15px 21px;
+					&:hover {
+						border: 1px solid #ffd063;
+					}
+				}
+			}
+		}
+		.process-img {
+			position: relative;
+			img {
+				position: absolute;
+				top: 0px;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.reviews {
+	padding: 30px 0;
+	@media (min-width: 992px) {
+		padding: 70px 0;
+	}
+	@media (min-width: 1200px) {
+		padding: 127px 0;
+	}
+	.reviews-wrap {
+		h2 {
+			font-family: "Roboto", sans-serif;
+			font-weight: 400;
+			@include fontzhsc(30px, 112%, 0.4px, #013a4c);
+			@media (min-width: 992px) {
+				@include fontzhsc(48px, 112%, 0.4px, #013a4c);
+			}
+		}
+		.review-cards {
+			padding: 20px 0;
+			@media (min-width: 992px) {
+				padding: 57px 0;
+				display: grid;
+				grid-template: 1fr / repeat(3, 1fr);
+				column-gap: 16px;
+			}
+			.review-card {
+				padding: 20px 15px;
+				border: 1px solid #d6dfe2;
+				border-radius: 8px;
+				display: grid;
+				grid-template: 1fr auto/ 1fr;
+				row-gap: 30px;
+				margin-bottom: 10px;
+				@media (min-width: 992px) {
+					padding: 66px 33px;
+					row-gap: 70px;
+				}
+				.review-text {
+					p {
+						padding-bottom: 18px;
+						@include fontzh(18px, 133%);
+					}
+					a {
+						@include fontzhsc(14px, 129%, normal, #89285b);
+						&:hover {
+							color: #f00;
+						}
+					}
+				}
+				.review-author {
+					display: grid;
+					grid-template: 1fr/48px 1fr;
+					column-gap: 16px;
+					align-items: center;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+footer {
+	background-color: #013a4c;
+	padding: 24px 0;
+	color: #99b0b7;
+	@media (min-width: 1200px) {
+		padding: 64px 0;
+	}
+	.footer-top {
+		@media (min-width: 1200px) {
+			display: grid;
+			grid-template: 1fr/ 1fr 4fr;
+			column-gap: 192px;
+		}
+		.logo-box {
+			padding-bottom: 25px;
+			@media (min-width: 1200px) {
+				padding-bottom: 0;
+			}
+			.headquarters {
+				padding-top: 20px;
+				@media (min-width: 1200px) {
+					padding-top: 64px;
+				}
+				@include fontzhsc(14px, 163%, normal, #fff);
+				a {
+					@include fontzhsc(14px, 1%, normal, #fff);
+					&:hover {
+						color: rgb(253, 1, 1);
+					}
+				}
+			}
+		}
+		.list-box {
+			display: grid;
+			grid-template: 2fr / repeat(2, 1fr);
+			row-gap: 15px;
+			justify-items: center;
+			@media (min-width: 576px) {
+				grid-template: 1fr / repeat(4, 1fr);
+			}
+			column-gap: 20px;
+			@media (min-width: 992px) {
+				column-gap: 72px;
+			}
+			.list {
+				a {
+					display: block;
+					@include fontzhsc(16px, 125%, normal, #99b0b7);
+					padding-bottom: 13px;
+				}
+				h3 {
+					color: #fff;
+					margin-bottom: 13px;
+				}
+				&:last-child a {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.footer-middle {
+		padding: 18px 0 23px;
+		border-top: 1px solid #346170;
+		border-bottom: 1px solid #346170;
+		@media (min-width: 576px) {
+			display: grid;
+			align-items: center;
+			grid-template: 1fr/2fr 1fr;
+			column-gap: 24px;
+		}
+		@media (min-width: 1200px) {
+			grid-template: 1fr/3fr 1fr 4fr;
+			column-gap: 48px;
+			padding: 48px 0 67px;
+		}
+		.slogan {
+			h3 {
+				@include fontzhsc(23px, 139%, normal, #fff);
+			}
+			p {
+				padding: 21px 0;
+				@include fontzhsc(14px, 143%, normal, #fff);
+				@media (min-width: 576px) {
+					padding: 11px 0;
+				}
+			}
+		}
+		.footer-middle-btn a {
+			&:hover {
+				border: 1px solid #ffd063;
+			}
+		}
+	}
+	.footer-bottom {
+		a {
+			@include fontzhsc(13px, 286%, normal, #99b0b7);
+			padding-right: 10px;
+			@media (min-width: 576px) {
+				&:not(:nth-child(3)) {
+					padding-right: 32px;
+				}
+			}
+		}
+		img {
+			vertical-align: middle;
+			@media (min-width: 576px) {
+				padding-left: 16px;
+			}
+		}
+	}
+}
